@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'package:flutter_login_screens/loaders/dot_type.dart';
+import 'package:piggie_bank/loaders/dot_type.dart';
 
 class ColorLoader5 extends StatefulWidget {
 

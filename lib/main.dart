@@ -4,7 +4,7 @@ import 'loaders/color_loader_2.dart';
 import 'loaders/color_loader_3.dart';
 import 'loaders/color_loader_4.dart';
 import 'loaders/color_loader_5.dart';
-import 'package:flutter_login_screens/loaders/dot_type.dart';
+import 'package:piggie_bank/loaders/dot_type.dart';
 
 void main() => runApp(new MyApp());
 
