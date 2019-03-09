@@ -14,7 +14,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   Widget welcomePage() {
     return new Container(
-      height: MediaQuery.of(context).size.height,
+      height: (MediaQuery.of(context).size.height + 100),
       decoration: BoxDecoration(
         color: Colors.redAccent,
         image: DecorationImage(
@@ -43,10 +43,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               children: <Widget>[
                 Text(
                   "Piggy Bank",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                  ),
+                  style: TextStyle(color: Colors.white, fontSize: 20.0),
                 ),
               ],
             ),
@@ -66,20 +63,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     onPressed: () => gotoSignup(),
                     child: new Container(
                       padding: const EdgeInsets.symmetric(
-                        vertical: 20.0,
-                        horizontal: 20.0,
-                      ),
+                          vertical: 20.0, horizontal: 20.0),
                       child: new Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           new Expanded(
-                            child: Text(
-                              "SIGN UP",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                            child: Text("SIGN UP",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold)),
                           ),
                         ],
                       ),
@@ -134,7 +127,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   Widget loginPage() {
     return new Scaffold(
         body: Container(
-      height: MediaQuery.of(context).size.height,
+      height: (MediaQuery.of(context).size.height + 100),
       decoration: BoxDecoration(
         color: Colors.white,
         image: DecorationImage(
@@ -203,9 +196,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               ],
             ),
           ),
-          Divider(
-            height: 24.0,
-          ),
+          Divider(height: 24.0),
           new Row(
             children: <Widget>[
               new Expanded(
@@ -325,9 +316,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 Text(
                   "OR CONNECT WITH",
                   style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold
-                  ),
+                      color: Colors.grey, fontWeight: FontWeight.bold),
                 ),
                 new Expanded(
                   child: new Container(
@@ -372,18 +361,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                                             MainAxisAlignment.spaceEvenly,
                                         children: <Widget>[
                                           Icon(
-                                            const IconData(0xea90,
-                                                fontFamily: 'icomoon'),
-                                            color: Colors.white,
-                                            size: 15.0,
-                                          ),
-                                          Text(
-                                            "FACEBOOK",
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold),
-                                          ),
+                                              const IconData(0xea90,
+                                                  fontFamily: 'icomoon'),
+                                              color: Colors.white,
+                                              size: 15.0),
+                                          Text("FACEBOOK",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold)),
                                         ],
                                       ),
                                     ),
@@ -457,7 +443,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   Widget signUpPage() {
     return new Scaffold(
         body: Container(
-      height: (MediaQuery.of(context).size.height - 40),
+      height: (MediaQuery.of(context).size.height + 100),
       decoration: BoxDecoration(
         color: Colors.white,
         image: DecorationImage(
@@ -710,7 +696,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: MediaQuery.of(context).size.height,
+        height: (MediaQuery.of(context).size.height - 100 ),
         child: PageView(
           controller: _controller,
           physics: new AlwaysScrollableScrollPhysics(),
