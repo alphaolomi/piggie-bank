@@ -54,7 +54,7 @@ class _LoginScreen3State extends State<LoginScreen3>
           ),
           new Container(
             width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 150.0),
+            margin: const EdgeInsets.only(left: 30.0, right: 30.0, top: 100.0),
             alignment: Alignment.center,
             child: new Row(
               children: <Widget>[
