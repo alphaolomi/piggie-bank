@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen3 extends StatefulWidget {
+class WelcomeScreen extends StatefulWidget {
   @override
-  _LoginScreen3State createState() => new _LoginScreen3State();
+  _WelcomeScreenState createState() => new _WelcomeScreenState();
 }
 
-class _LoginScreen3State extends State<LoginScreen3>
+class _WelcomeScreenState extends State<WelcomeScreen>
     with TickerProviderStateMixin {
-
   @override
   void initState() {
     super.initState();
   }
 
-  Widget HomePage() {
+  Widget welcomePage() {
     return new Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
@@ -132,9 +131,9 @@ class _LoginScreen3State extends State<LoginScreen3>
     );
   }
 
-
-  Widget LoginPage() {
-    return new Scaffold(body: Container(
+  Widget loginPage() {
+    return new Scaffold(
+        body: Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -196,10 +195,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                     obscureText: true,
                     textAlign: TextAlign.left,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'user@piggybank.co',
-                      hintStyle: TextStyle(color: Colors.grey),
-                    ),
+                        border: InputBorder.none,
+                        hintText: 'user@piggybank.co',
+                        hintStyle: TextStyle(color: Colors.grey)),
                   ),
                 ),
               ],
@@ -216,10 +214,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                   child: new Text(
                     "PASSWORD",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                      fontSize: 15.0,
-                    ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.redAccent,
+                        fontSize: 15.0),
                   ),
                 ),
               ),
@@ -247,18 +244,15 @@ class _LoginScreen3State extends State<LoginScreen3>
                     obscureText: true,
                     textAlign: TextAlign.left,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: '*********',
-                      hintStyle: TextStyle(color: Colors.grey),
-                    ),
+                        border: InputBorder.none,
+                        hintText: '*********',
+                        hintStyle: TextStyle(color: Colors.grey)),
                   ),
                 ),
               ],
             ),
           ),
-          Divider(
-            height: 24.0,
-          ),
+          Divider(height: 24.0),
           new Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
@@ -268,10 +262,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                   child: new Text(
                     "Forgot Password?",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                      fontSize: 15.0,
-                    ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.redAccent,
+                        fontSize: 15.0),
                     textAlign: TextAlign.end,
                   ),
                   onPressed: () => {},
@@ -333,7 +326,7 @@ class _LoginScreen3State extends State<LoginScreen3>
                   "OR CONNECT WITH",
                   style: TextStyle(
                     color: Colors.grey,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.bold
                   ),
                 ),
                 new Expanded(
@@ -369,7 +362,7 @@ class _LoginScreen3State extends State<LoginScreen3>
                                 children: <Widget>[
                                   new Expanded(
                                     child: new FlatButton(
-                                      onPressed: ()=>{},
+                                      onPressed: () => {},
                                       padding: EdgeInsets.only(
                                         top: 20.0,
                                         bottom: 20.0,
@@ -423,28 +416,23 @@ class _LoginScreen3State extends State<LoginScreen3>
                                 children: <Widget>[
                                   new Expanded(
                                     child: new FlatButton(
-                                      onPressed: ()=>{},
+                                      onPressed: () => {},
                                       padding: EdgeInsets.only(
-                                        top: 20.0,
-                                        bottom: 20.0,
-                                      ),
+                                          top: 20.0, bottom: 20.0),
                                       child: new Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: <Widget>[
                                           Icon(
-                                            const IconData(0xea88,
-                                                fontFamily: 'icomoon'),
-                                            color: Colors.white,
-                                            size: 15.0,
-                                          ),
-                                          Text(
-                                            "GOOGLE",
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold),
-                                          ),
+                                              const IconData(0xea88,
+                                                  fontFamily: 'icomoon'),
+                                              color: Colors.white,
+                                              size: 15.0),
+                                          Text("GOOGLE",
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.bold)),
                                         ],
                                       ),
                                     ),
@@ -464,11 +452,12 @@ class _LoginScreen3State extends State<LoginScreen3>
         ],
       ),
     ));
-    }
+  }
 
-  Widget SignupPage() {
-    return new Scaffold(body: Container(
-      height: MediaQuery.of(context).size.height,
+  Widget signUpPage() {
+    return new Scaffold(
+        body: Container(
+      height: (MediaQuery.of(context).size.height - 40),
       decoration: BoxDecoration(
         color: Colors.white,
         image: DecorationImage(
@@ -483,11 +472,8 @@ class _LoginScreen3State extends State<LoginScreen3>
           Container(
             padding: EdgeInsets.all(100.0),
             child: Center(
-              child: Icon(
-                Icons.account_balance,
-                color: Colors.redAccent,
-                size: 50.0,
-              ),
+              child: Icon(Icons.account_balance,
+                  color: Colors.redAccent, size: 50.0),
             ),
           ),
           new Row(
@@ -498,10 +484,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                   child: new Text(
                     "EMAIL",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                      fontSize: 15.0,
-                    ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.redAccent,
+                        fontSize: 15.0),
                   ),
                 ),
               ),
@@ -529,10 +514,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                     obscureText: true,
                     textAlign: TextAlign.left,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'user@piggybank.co',
-                      hintStyle: TextStyle(color: Colors.grey),
-                    ),
+                        border: InputBorder.none,
+                        hintText: 'user@piggybank.co',
+                        hintStyle: TextStyle(color: Colors.grey)),
                   ),
                 ),
               ],
@@ -549,10 +533,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                   child: new Text(
                     "PASSWORD",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                      fontSize: 15.0,
-                    ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.redAccent,
+                        fontSize: 15.0),
                   ),
                 ),
               ),
@@ -600,10 +583,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                   child: new Text(
                     "CONFIRM PASSWORD",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                      fontSize: 15.0,
-                    ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.redAccent,
+                        fontSize: 15.0),
                   ),
                 ),
               ),
@@ -631,10 +613,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                     obscureText: true,
                     textAlign: TextAlign.left,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: '*********',
-                      hintStyle: TextStyle(color: Colors.grey),
-                    ),
+                        border: InputBorder.none,
+                        hintText: '*********',
+                        hintStyle: TextStyle(color: Colors.grey)),
                   ),
                 ),
               ],
@@ -652,10 +633,9 @@ class _LoginScreen3State extends State<LoginScreen3>
                   child: new Text(
                     "Already have an account?",
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                      fontSize: 15.0,
-                    ),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.redAccent,
+                        fontSize: 15.0),
                     textAlign: TextAlign.end,
                   ),
                   onPressed: () => {},
@@ -724,7 +704,8 @@ class _LoginScreen3State extends State<LoginScreen3>
     );
   }
 
-  PageController _controller = new PageController(initialPage: 1, viewportFraction: 1.0);
+  PageController _controller =
+      new PageController(initialPage: 1, viewportFraction: 1.0);
 
   @override
   Widget build(BuildContext context) {
@@ -733,7 +714,7 @@ class _LoginScreen3State extends State<LoginScreen3>
         child: PageView(
           controller: _controller,
           physics: new AlwaysScrollableScrollPhysics(),
-          children: <Widget>[LoginPage(), HomePage(), SignupPage()],
+          children: <Widget>[loginPage(), welcomePage(), signUpPage()],
           scrollDirection: Axis.horizontal,
         ));
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'login_screen_3.dart';
+import 'welcome_screen.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new LoginScreen3(),
+      home: new WelcomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
