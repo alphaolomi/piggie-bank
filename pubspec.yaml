@@ -12,7 +12,11 @@ dependencies:
 
 
   cupertino_icons: ^0.1.2
+  charts_flutter: ^0.5.0
+  json_annotation:
+  http:
 
+    
 dev_dependencies:
   flutter_test:
     sdk: flutter
